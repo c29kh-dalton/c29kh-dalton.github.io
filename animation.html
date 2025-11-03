@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css"> 
+
+		#dad{
+			width:300px;
+			height:300px;
+			background-color: white;
+			background-image: url(dad1.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			animation-name: spinny;
+			animation-iteration-count: infinite;
+			animation-duration: 2s;
+
+			position:relative;
+			left:500px;
+			top:100px;
+
+		}
+
+		@keyframes spinny{
+			from{transform: rotateY(0deg);}
+
+			to{transform: rotateY(-100deg);}
+		}
+
+		#mom{
+			width:300px;
+			height:300px;
+			background-image: url(mom.png);
+
+			background-size:contain;
+			background-repeat: no-repeat;
+
+			animation-name: rotate;
+			animation-duration:2s;
+		}
+		
+	</style>
+</head>
+<body>
+<div id=dad></div>
+<div id=mom></div>
+
+
+</body>
+</html>
