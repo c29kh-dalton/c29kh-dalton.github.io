@@ -1,39 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-	<style type="text/css">
-		
-		.box{
-			width:10px;
-			height:10px;
+	<meta charset="utf-8">
+	<meta name ="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: darkolivegreen;
+		}
+		.confetti{
+			width:50px;
+			height:50px;
 			border: 1px solid black;
+			border-color: lightpink;
 			display: inline-block;
 			position: absolute;
 		}
 	</style>
-
 </head>
 <body>
-
-	<script type="text/javascript">
-		
-		function makeConfetti () {
+	<script>
+		function getRandomint(min,max) {
+			const minCeiled = Math.ceil(min);
+			const maxFloored = Math.floor(max);
+			return Math.floor(Math.random() * (maxFloored - minCeiled) +minCeiled) }
+function makeConfetti() {
 			let square = document.createElement("div")
-			square.classList.add("box")
+			square.classList.add("confetti")
 			document.body.appendChild(square)
 
-			let r= Math.round(Math.random()*255)
-			let g= Math.round(Math.random()*255)
-			let b= Math.round(Math.random()*255)
+			let r = Math.random() * 255
+			let g = Math.random() * 255
+			let b = Math.random() * 255
 
-			square.style.top=Math.random()*1000+"px"
-			square.style.left=Math.random()*2000+"px"
+			let rotation = Math.random() * 360
+
+ 			square.style.backgroundColor ="rgb("+ r + ", " + g + "," + b + ")"
+ 			// change random position
+			square.style.top= Math.random() * 1000 + "px"
+			square.style.left= Math.random() * window.innerWidth + "px"
+			square.style.width = Math.random() * 50 + "px"
+			square.style.height = Math.random()
+			square.style.transform = "rotate(" + rotation + "deg)"
 		
-			square.style.backgroundColor ="rgb("+r+", "+g+","+b+")"
+		function fall() {
+			let fallFactor = 30
+			square.style.top = parseInt(square.style.top) + fallFactor + "px"
+
+			if (parseInt(square.style.top) > 1000)
+				square.stule.top = Math.random() * 150 + "px"
+			}	
+			setInterval(fall,1000)
 		}
 
-		setInterval(makeConfetti,50)
+		setInterval(makeConfetti,100)
+		
 	</script>
 
 </body>
