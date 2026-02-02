@@ -39,17 +39,17 @@
 	</style>
 </head>
 <body>
+	<button id="btn">drop confetti</button>
+	<input type="color" id="colorPicker" value="#ff0000">
+	<input type="range" min="1" max="10" step="1" id="slider" value="2">
 	<script>
-
-		let colors=["#780116","#F7B538","#DB7C26","#D8572A", "#C32F27"]
 		let my_students = ["zara","sola","kelly"]
-		console.log(colors.length)
-		console.log(my_students.length)
-		//function getRandomint(min,max) {
-			//const minCeiled = Math.ceil(min);
-			//const maxFloored = Math.floor(max);
-			//return Math.floor(Math.random() * (maxFloored - minCeiled) +minCeiled) }
-function makeConfetti() {
+		let colors=["#780116","#F7B538","#DB7C26","#D8572A", "#C32F27"]
+
+		let dropConfettiBtn = document.getElementById("btn")
+		let colorPicker = document.getElementById("colorPicker")
+		console.log(colorPicker.value)
+		function makeConfetti() {
 
 			let square = document.createElement("div")
 			square.classList.add("confetti")
@@ -63,15 +63,14 @@ function makeConfetti() {
 			let startRot = Math.random() * -60 + "deg"
 			let endRot = Math.random() * 60 + "deg"
 
-			let randomColorIndex = Math.floor(Math.random()* colors.length)
+			let randomColorIndex = Math.floor(Math.random()* colors.length
+				)
 			console.log(randomColorIndex)
-			square.style.backgroundColor = colors[randomColorIndex]
-			square.style.setProperty("--startRot", startRot)
-			square.style.setProperty("--endRot", endRot)
- 			// square.style.backgroundColor ="rgb("+ r + ", " + g + "," + b + ")"
- 			// change random position
-			square.style.top= Math.random() * 1000 + "px"
-			square.style.left= Math.random() * 1500+ "px"
+
+			square.style.backgroundColor = colorPicker.value
+
+			square.style.top = Math.random() * 1000 + "px"
+			square.style.left = Math.random() * 1500+ "px"
 			square.style.transform = "rotate("+rotation+"deg)"
 			
 			square.style.setProperty("--startRot", startRot)
@@ -81,16 +80,19 @@ function makeConfetti() {
 			let fallFactor = 10
 			square.style.top = parseInt(square.style.top) + fallFactor + "px"
 
-			if (parseInt(square.style.top) > 1000){
+			if (parseInt(square.style.top) > 1000) {
 				square.style.top ="10px"
 			
 				}	
 			}
 			setInterval(fall,100)
 		}
-		for (let i = 0; i < 100; i++) {
+
+		dropConfettiBtn.addEventListener("click",function() {
+		for (let i = 0; i < slider.value; i++) {
 			makeConfetti()
 		}
+	})
 
 		//setInterval(makeConfetti,500)
 		
