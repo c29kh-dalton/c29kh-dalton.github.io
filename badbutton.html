@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	#badbunny{
+		position: absolute;
+		width: 200px;
+		height: 100px;
+		background-image: url(bad-bunny.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+	</style>
+</head>
+<body>
+	<button id="badbunny"> can't click me! </button>
+	<script>
+		// create a button variable for your bad button
+		let badbunny= document.getElementById("badbunny")
+
+badbunny.addEventListener("click",function() {
+console.log("click!")
+})
+
+badbunny.addEventListener("mouseover",function(){
+	console.log("mouse is over the button")
+badbunny.style.top = Math.random() * 700 + "px"
+badbunny.style.left = Math.random() * 1000 + "px" 
+})
+
+badbunny.addEventListener("mouseout", function(){
+	console.log("mouse leaves")
+})
+
+
+	</script>
+</body>
+</html>
