@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+</head>
+<body>
+	<script>
+		function setup() {
+			createCanvas(400,400)
+			noStroke()
+		}
+
+		function draw() {
+			background(250, 190, 229);
+			push()
+			let x = 200
+			let y = 200
+			translate(200,200)
+			noStroke()
+			 fill(207, 159, 89);
+			 circle(0,0,300)
+			  circle(300-200,70-200,60)
+			 circle(120-200,70-200,60)
+			 fill(143, 100, 37)
+			 circle(118-200,72-200,40) // dark brown
+			 circle(300-200,72-200,40)
+			 fill(237, 209, 168)
+			 ellipse(200-200,220-200,130,150)
+			 fill(79, 35, 2)
+			 circle(120-200,120-200,25)
+			 circle(280-200,120-200,25)
+			 stroke(0)
+			 strokeWeight(2)
+			 line(200-200, 150-200, 200-200, 236-200);
+			 // noFill()
+			 arc(200-200, 240-200, 100, 100, 0, PI, OPEN);
+			 fill("pink")
+			 arc(200-200, 260-200, 70, 100, 0, PI, OPEN);
+
+			
+			
+			
+			// circle(0-30,0-50,30)
+			//circle(0+30, 0-50, 30)
+
+			//circle(0,0,100)
+
+			if (d<150) {
+				arc(0,0-20,50,50,0,PI)
+			} else{
+				arc(0,0,50,50,0, PI)
+			}
+			
+			pop()
+
+			}
+
+		
+	</script>
+</body>
+</html>
