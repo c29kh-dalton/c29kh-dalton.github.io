@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#charlie{
+		width: 100px;
+		height: 123px;
+		position: absolute;
+		background-image: url(https://i.pinimg.com/originals/ab/65/bf/ab65bf79da087102031c8ec5044c77ca.gif);
+		background-size:contain;
+		background-repeat: no-repeat;
+		}
+	</style>
+	
+	
+</head>
+<body>
+
+<div id="charlie"></div>
+	
+<script type="text/javascript">
+	charlie.style.left="0px"
+	document.addEventListener("keypress",function(){
+
+		charlie.style.left = parseInt(charlie.style.left)+10+"px"
+		console.log("hi i'm charlie!")
+	})
+</script>
+</body>
+</html>

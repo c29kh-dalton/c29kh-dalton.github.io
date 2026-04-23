@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+function changeColor (){
+	let r = Math.round(Math.random()*255)
+	let g = Math.round(Math.random()*255)
+	let b = Math.round (Math.random()*255)
+
+	document.body.style.backgroundColor="rgb("+ r + "," +g +", "+ b+")"
+}
+
+setInterval(changeColor, 500)
+</script>
+</body>
+</html>

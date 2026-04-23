@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		#square{
+			height:100px;
+			width:100px;
+			background-color: darkolivegreen;
+		}
+		
+	</style>
+
+</head>
+<body>
+<div id="square"> </div>
+<script type="text/javascript">
+
+
+	let clicks=0
+
+	square.addEventListener("click", function() {
+		clicks=clicks+1
+		console.log(clicks)
+
+// one if statement
+		if(clicks%2==1) {
+			alert(clicks + " is odd")
+			square.style.backgroundColor="purple"
+	}
+
+// another if statement
+
+	if (clicks%2 ==0) {  
+
+		alert(clicks + " is even")
+		square.style.backgroundColor = "blue"
+	}
+
+ }     //end of function
+ )    //end of event addEventListener
+</script>
+</body>
+</html>

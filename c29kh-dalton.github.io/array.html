@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		#title{
+			font-size: 50px;
+		}
+	</style>
+
+</head>
+<body>
+
+
+<center>
+
+<div id="title"> What should I do instead of being on my phone? </div>
+
+<script type="text/javascript">
+let names = ["make matcha 🍵", "go hang out with mom❤️", "read 10 pages of my book📖", "put on music and dance in my room💃", "nap😴", "do a bodyrok class🤸‍♂️", "walk and get ice cream🍨", "color🌈", "bake cookies🍪"]
+
+
+document.addEventListener("click", function(){
+	let random = Math.round(Math.random() *8)
+		console.log(random)
+
+			alert(names[random])
+})
+</script>
+</body>
+</html>
