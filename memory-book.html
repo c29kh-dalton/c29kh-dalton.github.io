@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project | Kells & George</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive;
+      background: linear-gradient(to bottom, #ffd6f5, #ffe9fb, #c7f0ff);
+      overflow-x: hidden;
+      color: hotpink;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: deeppink;
+      text-shadow: 2px 2px white;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ff1493;
+    }
+
+    header {
+      padding: 30px;
+      background: rgba(255,255,255,0.4);
+      border-bottom: 4px dashed hotpink;
+    }
+
+    section {
+      margin: 60px auto;
+      width: 80%;
+      position: relative;
+    }
+
+    /* MEMORY SECTION */
+   .memory-section{  height: 900px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  border: 3px dashed hotpink;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 80px; /* 👈 THIS is the key fix */
+}
+
+    .memory-section h2 {
+      margin-bottom: 20px;
+    }
+    .playlist-section {
+      margin-top: 550px;
+    }
+    /* RANDOM PHOTO STYLE */
+    .photo {
+      width: 240px;
+      border: 6px solid white;
+      box-shadow: 0 0 20px hotpink;
+      position: absolute;
+      transition: 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .photo:hover {
+      transform: scale(1.08) rotate(0deg);
+      z-index: 10;
+      box-shadow: 0 0 30px hotpink;
+    }
+
+    /* RANDOM POSITIONS */
+    .img1 {
+      top: 40px;
+      left: 5%;
+      transform: rotate(-10deg);
+    }
+
+    .img2 {
+      top: 250px;
+      right: 10%;
+      transform: rotate(8deg);
+    }
+
+    .img3 {
+      top: 520px;
+      left: 35%;
+      transform: rotate(-6deg);
+    }
+
+    .img4 {
+      top: 720px;
+      left: 50%;
+      transform: rotate(4deg);
+    }
+    .img5 {
+      top:170px;
+      right:12%;
+      transfrom:rotate(7deg);
+    }
+
+    /* Y2K SPARKLES */
+    .sparkle {
+      position: fixed;
+      font-size: 25px;
+      animation: float 4s infinite alternate;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-20px); }
+    }
+
+    .s1 { top: 10%; left: 10%; }
+    .s2 { top: 30%; right: 15%; }
+    .s3 { bottom: 20%; left: 20%; }
+    .s4 { bottom: 10%; right: 10%; }
+    #song {
+      /*margin-top: 550px;*/
+    }
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+      font-size: 20px;
+      background: rgba(255,255,255,0.4);
+      border-top: 4px dashed hotpink;
+    }
+
+    iframe {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- sparkles -->
+<div class="sparkle s1">💖</div>
+<div class="sparkle s2">✨</div>
+<div class="sparkle s3">🦋</div>
+<div class="sparkle s4">🌊</div>
+
+<header>
+  <h1>💋 Kells & George 💋</h1>
+  <p></p>
+</header>
+
+<section>
+  <h2>💖 About This Project</h2>
+  <p>
+    This project represents our friendship through memories,
+    inside jokes, beach days, and total chaos.
+  </p>
+</section>
+
+<section class="memory-section">
+  <h2>📸 Memories</h2>
+
+  <img class="photo img1" src="beach1.png" alt="Beach">
+  <img class="photo img2" src="glasses.jpeg" alt="Glasses">
+  <img class="photo img3" src="minius.JPG" alt="young photo">
+  <img class="photo img4" src="bathroom.png" alt="bathroom selfie">
+  <img class="photo img5" src="bm.png" alt="bm">
+</section>
+
+
+
+<section>
+  <h2>✨ Reflection</h2>
+  <p>
+    Our friendship is full of memories, random adventures,
+    and moments that turned into inside jokes.
+    This scrapbook captures all the chaos and fun we've shared together 💕
+  </p>
+</section>
+<section class="playlist-section">
+  <h2>🎶 Playlist</h2>
+  <iframe
+    id="song"
+    src="https://open.spotify.com/embed/playlist/68gdoAL9lr3wKCDPsB21vH?utm_source=generator"
+    width="80%"
+    height="352"
+    margin-top: 120px;
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+
+  </iframe>
+</section>
+
+<footer>
+  <p></p>
+</footer>
+
+</body>
+</html>
